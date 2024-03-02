@@ -8,7 +8,7 @@ function Hero() {
       <Container>
         <h1 style={{ marginTop: "100px" }}>HERO SECTION</h1>
         <HashLink smooth to="/#footer" style={{ fontSize: "28px" }}>
-          to Footer...1234 vlad
+          to Footer
         </HashLink>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
