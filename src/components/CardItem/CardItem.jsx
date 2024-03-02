@@ -11,23 +11,24 @@ import {
 } from "./StyledCardItem.styled";
 import Stars from "../Stars/Stars";
 
-function CardItem({
-  brand,
-  model,
-  product_type,
-  img_card,
-  rate,
-  price,
-  promo_price,
-  color,
-  new_arrive,
-  accessories,
-  isFav,
-}) {
+function CardItem(props) {
+  const {
+    brand,
+    model,
+    product_type,
+    img_card,
+    rate,
+    price,
+    promo_price,
+    color,
+    new_arrive,
+    accessories,
+    isFav,
+  } = props;
   return (
     <StyledCardItem>
       {(promo_price || new_arrive) && (
-        <StyledDiscount newArrive={new_arrive}>
+        <StyledDiscount $newarrive={new_arrive}>
           {new_arrive ? "New" : `-$ ${price - promo_price}`}
         </StyledDiscount>
       )}
