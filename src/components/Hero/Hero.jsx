@@ -8,7 +8,7 @@ function Hero() {
       <Container>
         <h1 style={{ marginTop: "100px" }}>HERO SECTION</h1>
         <HashLink smooth to="/#footer" style={{ fontSize: "28px" }}>
-          to Footer
+          to Footer...
         </HashLink>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
@@ -17,8 +17,8 @@ function Hero() {
           incidunt aliquam quos in perspiciatis. Dolorem nobis architecto neque
           corrupti voluptatibus ipsum officiis quisquam. Expedita non minus a
           quod reprehenderit culpa sequi praesentium doloremque saepe blanditiis
-          modi dolores architecto libero velit laboriosam tenetur, quo quasi?
-          Numquam ex pariatur corporis mollitia ad quis fugiat facere
+          modi dolores architecto liberodasdasdasd2222 velit laboriosam tenetur,
+          quo quasi? Numquam ex pariatur corporis mollitia ad quis fugiat facere
           consequatur enim tenetur. Quod ullam debitis sunt maxime sapiente,
           aliquam eius? Eos nemo hic, reiciendis in perspiciatis dolorum totam
           facilis assumenda? Dicta facere aperiam vitae aliquam! Necessitatibus
