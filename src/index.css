@@ -1,0 +1,57 @@
+@import "../src/stylesheet/fonts.css";
+@import "../src/stylesheet/vars.css";
+@import "../node_modules/modern-normalize/modern-normalize.css";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  background-color: var(--main-bgcolor);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none ;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}

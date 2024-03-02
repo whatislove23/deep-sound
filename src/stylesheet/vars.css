@@ -1,0 +1,16 @@
+:root {
+  /* colors-texts */
+  --main-text: #303030;
+  --secondary-text: #fbfbfb;
+  --text-light-gray: #7d7d7d;
+  --red-caption: #f97373;
+  /* colors-background */
+  --main-bgcolor: #fbfbfb;
+  --disabled-button: #f3f3f3;
+  --secondary-bgcolor: #2e2e2e;
+  --border: #797777;
+  --bg-light-gray: #7d7d7d;
+  --accent-yellow: #fbbf24;
+  --yellow-hover: #ffe08f;
+  --yellow-pushed: #feb700;
+}
