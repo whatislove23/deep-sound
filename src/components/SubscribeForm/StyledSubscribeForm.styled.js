@@ -8,7 +8,7 @@ export const StyledSubscribeFormSection = styled.section`
   height: 400px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url(${bg});
-  filter: contrast(350%);
+  /* filter: contrast(350%); */
   background-size: cover;
   background-position: center;
   padding-top: 80px;

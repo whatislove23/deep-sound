@@ -111,11 +111,7 @@ export const StyledDiscount = styled.p`
   text-align: center;
   line-height: 14.4px;
   color: var(--main-text);
-  background-color: var(--main-bgcolor);
+  background-color: ${(props) =>
+    props.$newarrive ? "var(--yellow-pushed)" : "var(--main-bgcolor)"};
   border: 0.5px solid var(--main-text);
-  ${({ newArrive }) =>
-    newArrive &&
-    `
-    background: var(--yellow-pushed);
-  `}
 `;
