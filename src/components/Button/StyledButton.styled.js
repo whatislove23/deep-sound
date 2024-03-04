@@ -64,9 +64,9 @@ export const StandartBtnYellow = css`
 `;
 export const StyledButton = styled.button`
   ${StandartBtnDark};
-  ${({ btnType }) => {
+  ${({ $btnType }) => {
     let result = "";
-    switch (btnType) {
+    switch ($btnType) {
       case "light":
         result = StandartBtnLight;
         break;
@@ -77,7 +77,7 @@ export const StyledButton = styled.button`
         result = StandartBtnYellow;
         break;
       default:
-        result = StandartBtnDark;
+        result = "";
         break;
     }
     return result;
