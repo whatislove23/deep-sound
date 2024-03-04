@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import Close from '../../assets/Close.svg';
 import HeartRed from '../../assets/HeartRed.svg';
 import HeartWhite from '../../assets/HeartWhite.svg';
 
@@ -22,27 +21,8 @@ export const StyledNotification = styled.div`
         line-height: 20px;
         color: var(--secondary-text);
     }
-`;
-
-export const StyledCloseButton = styled.button`
-    background-image: url(${Close});
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    display: block;
-    padding: 0;
-    margin-left: 16px;
-    &:hover {
-        transform: scale(1.1);
-    }
-    &:active {
-        transform: scale(1);
-    }
-    &:focus-visible {
-        border: none;
-        outline: 2px solid var(--secondary-text);
-        outline-offset: 2px;
+    &>button {
+        margin-left: 16px;
     }
 `;
 
