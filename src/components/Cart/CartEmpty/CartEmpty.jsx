@@ -1,13 +1,11 @@
-import { StyledBlackButtonTemplate } from '../../StyledButtons.styled';
 import { StyledCartEmpty } from './Styled.CartEmpty.styled';
+import Button from '../../Button/Button';
 
 const CartEmpty = () => {
     return (
         <StyledCartEmpty>
             <div>Your cart is empty</div>
-            <StyledBlackButtonTemplate>
-                Continue shopping
-            </StyledBlackButtonTemplate>
+            <Button children={'Continue shopping'} btnType='dark'/>
         </StyledCartEmpty>
     )
 }

@@ -39,6 +39,11 @@ export const StyledCloseButton = styled.button`
     &:active {
         transform: scale(1);
     }
+    &:focus-visible {
+        border: none;
+        outline: 2px solid var(--secondary-text);
+        outline-offset: 2px;
+    }
 `;
 
 export const StyledUndoButton = styled.div`

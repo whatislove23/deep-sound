@@ -46,16 +46,6 @@ export const StyledOrderItem = styled.div`
             display: flex;
             flex-direction: column;
         }
-        &>button {
-            margin: 76.67px 0 28.67px 0;
-            transition: all 0.1s ease;
-            &:hover {
-                transform: translateY(-1px);
-            }
-            &:active {
-                transform: translateY(2px);
-            }
-        }
     }
 `;
 
@@ -73,6 +63,9 @@ export const StyledArrowUp = styled.svg`
     &:active {
         transform: scale(1);
     }
+    &:focus-visble {
+        border: 2px solid var(--main-text);
+    }
 `;
 
 export const StyledArrowDown = styled.svg`
@@ -89,13 +82,27 @@ export const StyledArrowDown = styled.svg`
     &:active {
         transform: scale(1);
     }
+    &:focus-visble {
+        border: 2px solid var(--main-text);
+    }
 `;
 
-export const StyledDeleteButton = styled.svg`
+export const StyledDeleteButton = styled.button`
     background-image: url(${Delete});
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     width: 14.67px;
     height: 14.67px;
+    margin: 76.67px 0 28.67px 0;
+    transition: all 0.1s ease;
+    &:hover {
+        transform: translateY(-1px);
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+    &:focus-visible {
+        outline-offset: 5px;
+    }
 `;
