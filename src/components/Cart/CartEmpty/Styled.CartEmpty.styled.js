@@ -12,13 +12,9 @@ export const StyledCartEmpty = styled.div`
     color: var(--main-text);
   }
   & button {
-    margin-top: 120px; 
-    background-color: var(--secondary-bgcolor);
-    color: var(--secondary-text);
-    padding: 12px 109px; 
-    font-weight: 500;
+    margin-top: 90px; 
+    width: 440px;
     font-size: 20px;
     line-height: 24px;
-    border: 0.5px solid var(--secondary-bgcolor);
   }
 `;

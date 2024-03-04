@@ -5,24 +5,30 @@ export const btn = css`
   height: 48px;
   background-color: var(--secondary-bgcolor);
   color: var(--secondary-text);
+  font-weight: 500;
   border-radius: 30px;
   border: none;
   appearance: none;
   outline: none;
   border: 0.5px solid var(--secondary-bgcolor);
+  transition: all 0.2s ease;
   &:hover {
     cursor: pointer;
     color: var(--main-text);
-    background-color: var(--bg-light-gray);
-    &:active {
-      cursor: auto;
-      background-color: var(--border);
-      color: var(--secondary-text);
-    }
-    &:disabled {
-      color: var(--secondary-text);
-      background-color: var(--disabled-button);
-    }
+    background-color: #D7D7D7;
+  }
+  &:active {
+    cursor: auto;
+    background-color: var(--border);
+    color: var(--secondary-text);
+  }
+  &:disabled {
+    color: var(--secondary-text);
+    background-color: var(--disabled-button);
+  }
+  &:focus-visible {
+    border: 3px solid #D7D7D7;
+    outline: 2px solid var(--secondary-bgcolor);
   }
 `;
 export const StandartBtnDark = styled.button`
@@ -31,6 +37,10 @@ export const StandartBtnDark = styled.button`
 export const StandartBtnLight = styled(StandartBtnDark)`
   background-color: var(--main-bgcolor);
   color: var(--main-text);
+  &:focus-visible {
+    border: 1px solid #797777;
+    outline: 2px solid var(--secondary-bgcolor);
+  }
 `;
 export const StandartBtnYellow = styled.button`
   border: none;
