@@ -67,13 +67,3 @@ export const StyledFormButton = styled(Button)`
     width: 104px;
   }
 `;
-
-export const StyledArrow = styled.svg`
-  width: 15px;
-  height: 12px;
-  background-image: url(${Arrow});
-  background-size: cover;
-  path {
-    fill: var(--main-text); // dosent work ?
-  }
-`;
