@@ -1,4 +1,5 @@
 import CardItem from "../CardItem/CardItem";
+import Container from "../Container/Container";
 import {
   StyledLinkShowMore,
   StyledNewArrives,
@@ -112,13 +113,15 @@ const products = [
 function NewArrives() {
   return (
     <StyledNewArrives>
-      <h2>New Arrives</h2>
-      <div className="items_container">
-        {products.map((element) => (
-          <CardItem {...element} key={element.brand} />
-        ))}
-      </div>
-      <StyledLinkShowMore to="">Show more</StyledLinkShowMore>
+      <Container>
+        <h2>New Arrives</h2>
+        <div className="items_container">
+          {products.map((element) => (
+            <CardItem {...element} key={element.brand} />
+          ))}
+        </div>
+        <StyledLinkShowMore to="">Show more</StyledLinkShowMore>
+      </Container>
     </StyledNewArrives>
   );
 }

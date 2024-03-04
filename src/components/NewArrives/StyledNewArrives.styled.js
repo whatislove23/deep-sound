@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Container from "../Container/Container";
+
 import { NavLink } from "react-router-dom";
 import { StandartBtnDark } from "../Button/StyledButton.styled";
-export const StyledNewArrives = styled(Container)`
+export const StyledNewArrives = styled.section`
   h2 {
     font-weight: 400;
     font-size: 48px;
