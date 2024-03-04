@@ -20,9 +20,7 @@ const OrderItem = (props) => {
                         <StyledArrowDown />
                     </i>
                 </span>
-                <button>
                     <StyledDeleteButton />
-                </button>
             </section>
         </StyledOrderItem>
     )

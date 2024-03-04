@@ -34,7 +34,7 @@ export const StyledOrderCheckout = styled.div`
             gap: 16px;
         }
         &>section button {
-            padding: 12px 24px;
+            width: 520px;
             font-size: 20px;
             line-height: 20px;
         }

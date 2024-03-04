@@ -6,9 +6,8 @@ function Hero() {
   return (
     <StyledHero>
       <Container>
-        <h1 style={{ marginTop: "100px" }}>HERO SECTION</h1>
+        <h1 style={{ marginTop: "48px" }}>HERO SECTION</h1>
         <HashLink smooth to="/#footer" style={{ fontSize: "28px" }}>
-
           to Footer...1234 vlad 122333 hello vercel
         </HashLink>
         <p>
