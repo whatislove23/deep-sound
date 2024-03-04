@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const btn = css`
+export const StandartBtnDark = css`
   width: 630px;
   height: 48px;
   background-color: var(--secondary-bgcolor);
@@ -15,7 +15,7 @@ export const btn = css`
   &:hover {
     cursor: pointer;
     color: var(--main-text);
-    background-color: #D7D7D7;
+    background-color: #d7d7d7;
   }
   &:active {
     cursor: auto;
@@ -27,14 +27,11 @@ export const btn = css`
     background-color: var(--disabled-button);
   }
   &:focus-visible {
-    border: 3px solid #D7D7D7;
+    border: 3px solid #d7d7d7;
     outline: 2px solid var(--secondary-bgcolor);
   }
 `;
-export const StandartBtnDark = styled.button`
-  ${btn}
-`;
-export const StandartBtnLight = styled(StandartBtnDark)`
+export const StandartBtnLight = css`
   background-color: var(--main-bgcolor);
   color: var(--main-text);
   &:focus-visible {
@@ -42,10 +39,9 @@ export const StandartBtnLight = styled(StandartBtnDark)`
     outline: 2px solid var(--secondary-bgcolor);
   }
 `;
-export const StandartBtnYellow = styled.button`
+export const StandartBtnYellow = css`
   border: none;
-  appearance: none;
-  outline: none;
+  width: 136px;
   height: 32px;
   padding: 8px;
   display: flex;
@@ -65,4 +61,25 @@ export const StandartBtnYellow = styled.button`
     color: var(--secondary-text);
     background-color: var(--disabled-button);
   }
+`;
+export const StyledButton = styled.button`
+  ${StandartBtnDark};
+  ${({ $btnType }) => {
+    let result = "";
+    switch ($btnType) {
+      case "light":
+        result = StandartBtnLight;
+        break;
+      case "dark":
+        result = StandartBtnDark;
+        break;
+      case "yellow":
+        result = StandartBtnYellow;
+        break;
+      default:
+        result = "";
+        break;
+    }
+    return result;
+  }}
 `;
