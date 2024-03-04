@@ -7,7 +7,7 @@ function Layout() {
   return (
     <>
       <Header />
-      <CartModal isEmpty={false}/>
+      //<CartModal isEmpty={false}/>
       <Outlet />
       <Footer />
     </>
