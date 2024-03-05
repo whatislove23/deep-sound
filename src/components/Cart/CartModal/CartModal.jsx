@@ -57,7 +57,7 @@ const CartModal = (props) => {
         <StyledCartModal>
             <StyledCartModalHeader>
                 <h2>Your cart</h2>
-                <Cancel cancelStyle='dark' />
+                <Cancel btnType='dark' />
             </StyledCartModalHeader>
             {cartModal}
         </StyledCartModal>
