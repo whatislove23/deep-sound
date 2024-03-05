@@ -1,8 +1,8 @@
-import { styled } from "styled-components";
+import styled, { css } from "styled-components";
 import CloseDark from '../../assets/CloseDark.svg';
 import CloseLight from '../../assets/Close.svg';
 
-export const StyledCancelLight = styled.button`
+export const StyledCancelLight = css`
     background-image: url(${CloseLight});
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@ export const StyledCancelLight = styled.button`
     }
 `;
 
-export const StyledCancelDark = styled.button`
+export const StyledCancelDark = css`
     background-image: url(${CloseDark});
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,4 +40,23 @@ export const StyledCancelDark = styled.button`
         outline: 2px solid var(--secondary-text);
         outline-offset: 2px;
     }
+`;
+
+export const StyledCancelButton = styled.button`
+  ${StyledCancelDark};
+  ${({ $btnType }) => {
+    let result = '';
+    switch ($btnType) {
+      case "light":
+        result = StyledCancelLight;
+        break;
+      case "dark":
+        result = StyledCancelDark;
+        break;
+      default:
+        result = StyledCancelDark;
+        break;
+    }
+    return result;
+  }}
 `;
