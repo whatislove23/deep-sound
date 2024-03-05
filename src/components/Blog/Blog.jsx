@@ -8,25 +8,25 @@ function Blog() {
 		id: 1,
 		link: '/blog/1',
 		title: 'Beats Pro 2 - Full Review',
-		imgUrl: 'src/assets/blog/blog-one.jpg'
+		imgUrl: 'https://res.cloudinary.com/diasihr5q/image/upload/v1709631795/blog-one.jpg'
 	},
 	{
 		id: 2,
 		link: '/blog/2',
 		title: 'Stephen Kulik - What a good sound should be?',
-		imgUrl: 'src/assets/blog/blog-two.jpg'
+		imgUrl: 'https://res.cloudinary.com/diasihr5q/image/upload/v1709631795/blog-two.jpg'
 	},
 	{
 		id: 3,
 		link: '/blog/3',
 		title: 'Your home studio - what is the minimum price?',
-		imgUrl: 'src/assets/blog/blog-three.jpg'
+		imgUrl: 'https://res.cloudinary.com/diasihr5q/image/upload/v1709631795/blog-three.jpg'
 	},
 	{
 		id: 4,
 		link: '/blog/4',
 		title: 'Understanding Compression A Full User Guide',
-		imgUrl: 'src/assets/blog/blog-four.jpg'
+		imgUrl: 'https://res.cloudinary.com/diasihr5q/image/upload/v1709631795/blog-four.jpg'
 	}])
 	return (
 		<StyledBlog>
