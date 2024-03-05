@@ -1,11 +1,12 @@
-import {StyledCloseButton, StyledHeartRed, StyledHeartWhite, StyledNotification, StyledUndoButton } from './StyledNotifications.styled';
+import Cancel from '../Cancel/Cancel';
+import { StyledHeartRed, StyledHeartWhite, StyledNotification, StyledUndoButton } from './StyledNotifications.styled';
 
 const Notification = (props) => {
     return (
         <span style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <StyledNotification>
                 <h4>{props.title}</h4>
-                <StyledCloseButton />
+                <Cancel btnType='light' />
             </StyledNotification>
         </span>
     )
@@ -29,7 +30,7 @@ export const NotiFavorite = (props) => {
                 {icon}
                 <h4>{title}</h4>
                 {undo}
-                <StyledCloseButton />
+                <Cancel btnType='light' />
             </StyledNotification>
         </span>
     )
