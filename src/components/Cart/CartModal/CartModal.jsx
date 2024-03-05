@@ -50,9 +50,9 @@ const CartEmpty = (props) => {
 
 const CartModal = (props) => {
     let cartModal;
-    if (props.isEmpty) cartModal = <CartEmpty />
-    else cartModal = <CartFilled />
-
+    props.cartModal ?
+    cartModal = <CartEmpty /> :
+    cartModal = <CartFilled />
     return (
         <StyledCartModal>
             <StyledCartModalHeader>
