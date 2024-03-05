@@ -1,14 +1,11 @@
-import { StyledCancelLight, StyledCancelDark } from "./StyledCancel.styled";
+import { StyledCancelButton } from "./StyledCancel.styled";
 
-const Cancel = (props) => {
-    switch (props.cancelStyle) {
-        case 'light': 
-            return <StyledCancelLight />;
-        case 'dark': 
-            return <StyledCancelDark />;
-        default: 
-            return  <StyledCancelDark />;
-    }
+const Cancel = ({ children, btnType = "light", ...restProps }) => {
+    return (
+        <StyledCancelButton $btnType={btnType} {...restProps}>
+            {children}
+        </StyledCancelButton>
+    )
 }
 
 export default Cancel;
