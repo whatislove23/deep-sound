@@ -5,7 +5,6 @@ import {
 import PropTypes from "prop-types";
 
 function DropdownMenu({ nameDataMenu, dropdownMenuRef, isDropdownOpen }) {
-  console.log("isDropdownOpen: ", isDropdownOpen);
   return (
     <StyledDropdownMenu
       ref={dropdownMenuRef}

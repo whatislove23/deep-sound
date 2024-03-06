@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Container from "../Container/Container";
 
 export const StyledHeader = styled.header`
-  .layer {
-    width: 100%;
-    background-color: var(--secondary-bgcolor);
-    color: var(--secondary-text);
-  }
+  position: sticky;
+  top: 0;
+  background-color: var(--main-bgcolor);
+  z-index: 999;
 `;
 
 export const StyledLayerContainer = styled(Container)`
@@ -15,11 +14,6 @@ export const StyledLayerContainer = styled(Container)`
   flex-direction: row;
   padding-top: 8px;
   padding-bottom: 8px;
-
-  .name-shop {
-    width: 100%;
-    max-width: 85px;
-  }
 `;
 
 export const StyledHeaderContainer = styled(Container)`
@@ -31,6 +25,12 @@ export const StyledHeaderContainer = styled(Container)`
   padding: 24px 80px;
   border-bottom: 0.5px solid #797777;
   position: relative;
+
+  p {
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-left: 37px;
+  }
 
   .lang-wrapper {
     width: 100%;
