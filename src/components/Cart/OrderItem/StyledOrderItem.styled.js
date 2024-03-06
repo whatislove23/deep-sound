@@ -14,6 +14,7 @@ export const StyledOrderItem = styled.div`
     font-size: 16px;
     font-weight: 500;
     font-family: Montserrat, sans-serif;
+    border-bottom: 0.5px solid var(--border);
     & img {
         max-width: 128px;
         max-height: 128px;
@@ -93,7 +94,7 @@ export const StyledDeleteButton = styled.button`
     background-repeat: no-repeat;
     display: block;
     width: 14.67px;
-    height: 14.67px;
+    min-height: 14.67px;
     margin: 76.67px 0 28.67px 0;
     transition: all 0.1s ease;
     &:hover {
