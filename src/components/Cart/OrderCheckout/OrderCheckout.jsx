@@ -1,4 +1,4 @@
-import { StyledBlackButtonTemplate, StyledWhiteButtonTemplate } from '../../StyledButtons.styled';
+import Button from '../../Button/Button';
 import { StyledMastercard, StyledOrderCheckout, StyledPayPal, StyledPayoneer, StyledVisa } from './StyledOrderCheckout.styled';
 
 function OrderCheckout() {
@@ -11,8 +11,8 @@ function OrderCheckout() {
                 </div>
                 <span>*Taxes and shipping calculated at checkout</span>
                 <section>
-                    <StyledBlackButtonTemplate>Check out</StyledBlackButtonTemplate>
-                    <StyledWhiteButtonTemplate>Cancel</StyledWhiteButtonTemplate>
+                    <Button children={'Check out'} btnType='dark' />
+                    <Button children={'Cancel'} btnType='light' />
                 </section>
             </div>
             <span>

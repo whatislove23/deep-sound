@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Container from "../Container/Container";
+
 import { NavLink } from "react-router-dom";
-import { btn } from "../Button/StyledButton.styled";
-export const StyledNewArrives = styled(Container)`
+import { StandartBtnDark } from "../Button/StyledButton.styled";
+export const StyledNewArrives = styled.section`
   h2 {
     font-weight: 400;
     font-size: 48px;
@@ -16,7 +16,7 @@ export const StyledNewArrives = styled(Container)`
   }
 `;
 export const StyledLinkShowMore = styled(NavLink)`
-  ${btn}
+  ${StandartBtnDark}
   width: 414px;
   height: 48px;
   display: flex;

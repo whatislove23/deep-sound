@@ -78,6 +78,7 @@ export const StyledHeartButton = styled.button`
   transition: 0.15s ease-in all;
   display: flex;
   opacity: 0;
+  justify-content: center;
   align-items: center;
   border: none;
   appearance: none;
