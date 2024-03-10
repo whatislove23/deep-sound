@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const StandartBtnDark = css`
   width: 630px;
@@ -82,4 +83,15 @@ export const StyledButton = styled.button`
     }
     return result;
   }}
+`;
+
+export const StyledNavLinkButton = styled(NavLink)`
+  ${StandartBtnDark};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: var(--secondary-bgcolor);
+  color: var(--secondary-text);
+  text-decoration: none;
 `;
