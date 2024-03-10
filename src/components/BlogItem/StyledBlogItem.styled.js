@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from '../Button/Button';
+import { StyledNavLinkButton, StandartBtnLight } from '../Button/StyledButton.styled';
 
 export const StyledBlogItem = styled.div`
 	width: 100%;
@@ -42,7 +42,8 @@ export const StyledBlogItem = styled.div`
 	}
 `
 
-export const StyledBlogButton = styled(Button)`
+export const StyledBlogButton = styled(StyledNavLinkButton)`
+	${StandartBtnLight}
 	width: 273px;
 	height: 32px;
 `
