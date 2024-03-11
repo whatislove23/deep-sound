@@ -12,7 +12,7 @@ import NaviLink from "../../shared/components/NaviLink/NaviLink";
 import { NavLink } from "react-router-dom";
 import icons from "../../assets/icons.svg";
 
-function Header() {
+function Header(props) {
   return (
     <StyledHeader>
       <div className="layer">
@@ -49,7 +49,8 @@ function Header() {
           </li>
           <li>
             <NavLink to="/">
-              <svg
+              <svg 
+                onClick={props.openModal}
                 style={{ width: "22.5px", height: "23.3px", fill: "#303030" }}
               >
                 <use href={icons + "#basket"}></use>

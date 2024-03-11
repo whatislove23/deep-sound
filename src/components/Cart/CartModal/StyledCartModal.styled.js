@@ -5,9 +5,16 @@ export const StyledCartModal = styled.div`
     top: 0;
     right: 0;
     width: 480px;
-    height: 958px;
+    height: 100vh;
     border: 0.5px solid var(--secondary-bgcolor);
     background: var(--main-bgcolor);
+    transition: all 0.6s ease-in;
+    &.opened {
+        transform: translateX(0);
+    }
+    &.closed {
+        transform: translateX(100%);
+    }
 `;
 
 export const StyledCartModalHeader = styled.header`

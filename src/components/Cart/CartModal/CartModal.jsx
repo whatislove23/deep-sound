@@ -9,6 +9,18 @@ import Button from '../../Button/Button';
 import Cancel from "../../Cancel/Cancel";
 import OrderItem from '../OrderItem/OrderItem';
 
+const CartModal = (props) => {
+    return (
+        <StyledCartModal id='dd' className={props.isModalOpened ? 'opened' : 'closed'}>
+            <StyledCartModalHeader>
+                <h2>Your cart</h2>
+                <Cancel onClick={props.closeModal} btnType='dark' />
+            </StyledCartModalHeader>
+            {props.isEmpty ? <CartEmpty closeModal={props.closeModal} /> : <CartFilled />}
+        </StyledCartModal>
+    )
+}
+
 const CartFilled = (props) => {
     return (
         <div>
@@ -43,25 +55,10 @@ const CartEmpty = (props) => {
     return (
         <StyledCartModalEmpty>
             <span>Your cart is empty</span>
-            <Button children={'Continue shopping'} btnType='dark' />
+            <Button onClick={props.closeModal} children={'Continue shopping'} btnType='dark' />
         </StyledCartModalEmpty>
     )
 }
 
-const CartModal = (props) => {
-    let cartModal;
-    props.cartModal ?
-    cartModal = <CartEmpty /> :
-    cartModal = <CartFilled />
-    return (
-        <StyledCartModal>
-            <StyledCartModalHeader>
-                <h2>Your cart</h2>
-                <Cancel btnType='dark' />
-            </StyledCartModalHeader>
-            {cartModal}
-        </StyledCartModal>
-    )
-}
 
 export default CartModal;
