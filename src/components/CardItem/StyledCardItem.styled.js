@@ -8,6 +8,7 @@ export const StyledCardItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
   h3 {
     color: var(--main-text);
     font-weight: 500;
