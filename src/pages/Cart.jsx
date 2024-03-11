@@ -3,13 +3,12 @@ import CartEmpty from "../components/Cart/CartEmpty/CartEmpty";
 import CartFilled from "../components/Cart/CartFilled/CartFilled";
 
 function Cart(props) {
-    let cart;
-    props.isEmpty ?
-    cart = <CartEmpty /> :
-    cart = <CartFilled />;
     return (
         <Container>
-            {cart}
+            {props.isEmpty ? 
+                <CartEmpty /> :
+                <CartFilled />
+            }
         </Container>
     )
 }

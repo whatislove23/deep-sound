@@ -12,7 +12,7 @@ function Layout() {
     <>
       <Header openModal={toggleModal} />
       <CartModal
-        isEmpty
+        isEmpty={false}
         isModalOpened={isModalOpened}
         closeModal={toggleModal}
       />

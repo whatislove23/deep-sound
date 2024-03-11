@@ -8,15 +8,16 @@ import {
 import Button from '../../Button/Button';
 import Cancel from "../../Cancel/Cancel";
 import OrderItem from '../OrderItem/OrderItem';
+import { NavLink } from "react-router-dom";
 
 const CartModal = (props) => {
     return (
-        <StyledCartModal id='dd' className={props.isModalOpened ? 'opened' : 'closed'}>
+        <StyledCartModal className={props.isModalOpened ? 'opened' : 'closed'}>
             <StyledCartModalHeader>
                 <h2>Your cart</h2>
                 <Cancel onClick={props.closeModal} btnType='dark' />
             </StyledCartModalHeader>
-            {props.isEmpty ? <CartEmpty closeModal={props.closeModal} /> : <CartFilled />}
+            {props.isEmpty ? <CartEmpty closeModal={props.closeModal} /> : <CartFilled closeModal={props.closeModal}/>}
         </StyledCartModal>
     )
 }
@@ -43,7 +44,11 @@ const CartFilled = (props) => {
                 <div>*Taxes and shipping calculated at checkout</div>
                 <div>Shipping information</div>
                 <div style={{ marginTop: '8px', display: 'flex', justifyContent: 'space-between' }}>
-                    <Button style={{ width: '152px', fontSize: '20px', lineHeight: '20px' }} children={'View Cart'} btnType='light' />
+                    <Button 
+                        style={{ width: '152px', fontSize: '20px', lineHeight: '20px' }} 
+                        children={<NavLink to='/cart'>View Cart</NavLink>} 
+                        btnType='light'
+                        onClick={props.closeModal} />
                     <Button style={{ width: '256px', fontSize: '20px', lineHeight: '24px' }} children={'Check out'} btnType='dark' />
                 </div>
             </StyledCartModalFooter>

@@ -6,4 +6,9 @@ export const StyledOrderList = styled.ul`
     flex-direction: column;
     gap: 24px 0;
     cursor: default;
+    height: calc(100vh - 228px - 80px);
+    overflow-y: auto;
+    padding-right: 16px;
 `;
+
+
