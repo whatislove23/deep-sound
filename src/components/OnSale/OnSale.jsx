@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CardItem from "../CardItem/CardItem";
 import Container from "../Container/Container";
 import {
@@ -6,6 +7,7 @@ import {
 } from "../NewArrives/StyledNewArrives.styled";
 const products = [
   {
+    id: 1,
     brand: "Audiolab",
     model:
       "9000A Silver (Limited Edition) asdas 9000A Silver (Limited Edition)",
@@ -20,6 +22,7 @@ const products = [
     accessories: ["1234", "3958593", "216347"],
   },
   {
+    id: 2,
     brand: "Sony",
     model: "WH-1000XM4",
     product_type: "headphones",
@@ -33,6 +36,7 @@ const products = [
     accessories: ["1234", "5678", "91011"],
   },
   {
+    id: 3,
     brand: "Bose",
     model: "QuietComfort 35 II",
     product_type: "headphones",
@@ -47,6 +51,7 @@ const products = [
   },
   // Додайте інші об'єкти за аналогією з вказаним форматом даних
   {
+    id: 4,
     brand: "Sennheiser",
     model: "HD 660 S",
     product_type: "headphones",
@@ -59,6 +64,7 @@ const products = [
     accessories: ["1234", "5678", "91011"],
   },
   {
+    id: 5,
     brand: "Beats by Dre",
     model: "Solo Pro",
     product_type: "headphones",
@@ -72,6 +78,7 @@ const products = [
     accessories: ["1234", "5678", "91011"],
   },
   {
+    id: 6,
     brand: "AKG",
     model: "K701",
     product_type: "headphones",
@@ -84,6 +91,7 @@ const products = [
     accessories: ["1234", "5678", "91011"],
   },
   {
+    id: 7,
     brand: "JBL",
     model: "Tune 500BT",
     product_type: "headphones",
@@ -97,6 +105,7 @@ const products = [
     accessories: ["1234", "5678", "91011"],
   },
   {
+    id: 8,
     brand: "Audio-Technica",
     model: "ATH-M50x",
     product_type: "headphones",
@@ -117,7 +126,9 @@ function OnSale() {
         <h2>On Sale</h2>
         <div className="items_container">
           {products.map((element) => (
-            <CardItem {...element} key={element.brand} />
+            <Link key={element.id} to={`/product/${element.id}`}>
+              <CardItem {...element} />
+            </Link>
           ))}
         </div>
         <StyledLinkShowMore to="">Show more</StyledLinkShowMore>

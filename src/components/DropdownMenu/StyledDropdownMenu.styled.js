@@ -29,7 +29,7 @@ export const StyledDropdownMenu = styled.div`
   max-width: 1440px;
   position: absolute;
   left: 0;
-  top: 137px;
+  top: 145px;
   overflow: hidden;
 
   /* &.open-menu {

@@ -13,9 +13,12 @@ function NavHeader() {
       const closeDropdown =
         isDropdownOpen &&
         !dropdownMenuRef.current.contains(event.target) &&
-        event.target.dataset.type !== "nav-button";
+        !event.target.closest('[data-type="nav-button"]');
 
-      if (closeDropdown) setIsDropdownOpen(false);
+      if (closeDropdown) {
+        setNameDataMenu("");
+        setIsDropdownOpen(false);
+      }
     };
     document.addEventListener("click", handleDocumentClick);
 
@@ -27,10 +30,8 @@ function NavHeader() {
   const handleClickBtnNav = (e) => {
     const typeBtn = e.currentTarget.dataset.type;
     const nameBtn = e.currentTarget.dataset.name;
-    console.log("e.currentTarget: ", e.currentTarget);
     const isClickBtnActiveMenu =
-      (isDropdownOpen && typeBtn === "nav-button")
-       && nameBtn === nameDataMenu;
+      isDropdownOpen && typeBtn === "nav-button" && nameBtn === nameDataMenu;
 
     if (isClickBtnActiveMenu) return;
     setIsDropdownOpen(true);
