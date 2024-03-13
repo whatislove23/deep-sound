@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { StyledCancelButton } from "./StyledCancel.styled";
 
 const Cancel = ({ children, btnType = "light", ...restProps }) => {
@@ -9,3 +10,8 @@ const Cancel = ({ children, btnType = "light", ...restProps }) => {
 }
 
 export default Cancel;
+
+Cancel.propTypes = {
+    children: PropTypes.node,
+    btnType: PropTypes.string,
+  };
