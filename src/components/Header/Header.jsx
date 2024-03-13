@@ -15,7 +15,7 @@ import LogoLink from "../../shared/components/LogoLink/LogoLink";
 import Search from "../Search/Search";
 import NaviLink from "../../shared/components/NaviLink/NaviLink";
 
-function Header() {
+function Header(props) {
   const location = useLocation();
   const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
 
@@ -72,6 +72,7 @@ function Header() {
             <li>
               <NavLink to="/cart">
                 <svg
+                  onClick={props.openModal}
                   style={{ width: "22.5px", height: "23.3px", fill: "#303030" }}
                 >
                   <use href={icons + "#basket"}></use>

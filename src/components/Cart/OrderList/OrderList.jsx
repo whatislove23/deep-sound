@@ -3,7 +3,7 @@ import OrderItem from "../OrderItem/OrderItem";
 
 function OrderList() {
     return (
-        <StyledOrderList>
+            <StyledOrderList>
             <OrderItem 
                 img={'#'} 
                 brand={'brand'} 

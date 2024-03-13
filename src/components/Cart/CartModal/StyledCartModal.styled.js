@@ -5,9 +5,33 @@ export const StyledCartModal = styled.div`
     top: 0;
     right: 0;
     width: 480px;
-    height: 958px;
+    height: 100vh;
     border: 0.5px solid var(--secondary-bgcolor);
     background: var(--main-bgcolor);
+    transition: all 0.6s ease-in;
+    &.opened {
+        transform: translateX(0);
+    }
+    &.closed {
+        transform: translateX(100%);
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: #D7D7D7;
+        border-radius: 5px;
+      }
+    ::-webkit-scrollbar-thumb {
+        max-height: 18px;
+        background: var(--main-text);
+        border-radius: 5px;
+        border: 2px solid #D7D7D7;
+        &:hover {
+            background: var(--bg-light-gray);
+        }
+        &:active {
+            background: var(--main-text);
+        }
+    }
 `;
 
 export const StyledCartModalHeader = styled.header`
@@ -48,17 +72,17 @@ export const StyledCartModalFilled = styled.div`
     flex-direction: column;
     margin-top: 24px;
     gap: 24px;
+    height: calc(100vh - 192px - 72px - 24px - 40px);
+    overflow-y: auto;
     &>div {
-        padding: 0 28px;
+        padding: 0 16px 0 28px;
     }
 `;
 
 export const StyledCartModalFooter = styled.footer`
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 100%;
     height: 192px;
+    margin-top: 40px;
     border-top: 0.5px solid var(--border);
     display: flex; 
     flex-direction: column;
