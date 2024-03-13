@@ -5,14 +5,17 @@ import SubscribeForm from "../components/SubscribeForm/SubscribeForm";
 import Blog from "../components/Blog/Blog";
 import { StyledMain } from "./StyledHome.styled";
 
-
 function Home() {
   return (
     <StyledMain>
-      <Hero />
+      <Hero
+        title={"Sony - a new preamp series"}
+        descr={"A fully new preamp headphone Sony"}
+        link={""}
+      />
       <NewArrives />
       <OnSale />
-      <Blog/>
+      <Blog />
       <SubscribeForm />
     </StyledMain>
   );
