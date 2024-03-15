@@ -9,8 +9,7 @@ function Home() {
   return (
     <StyledMain>
       <Hero
-        title={"Sony - a new preamp series"}
-        descr={"A fully new preamp headphone Sony"}
+        title={"Technics a new series of pickups"}
         link={""}
       />
       <NewArrives />
