@@ -1,38 +1,51 @@
 import styled from "styled-components";
 import { StyledNavLinkButton, StandartBtnLight } from "../Button/StyledButton.styled";
+import noise from "../../assets/noise-bg.png"
 
 export const StyledHero = styled.section`
-  margin-top: 10px;
   position: relative;
   color: #fff;
+  height: calc(100vh - 179px);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url(${noise});
+  }
 
   video {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 `;
 
 export const StyledHeroWrapper = styled.div`
   position: absolute;
-  max-width: 1064px;
+  max-width: 1280px;
   width: 100%;
-  top: 80px;
+  bottom: 64px;
   left: 50%;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 32px;
   transform: translateX(-50%);
+  z-index: 2;
 
   h2 {
-    font-size: 48px;
+    max-width: 843px;
+    font-size: 64px;
+    font-weight: 800;
     line-height: 1.2;
+    white-space: pre-wrap
   }
 
-  p {
-    font-size: 20px;
-    line-height: 1;
-  }
 `;
 
 export const StyledHeroBtn = styled(StyledNavLinkButton)`
