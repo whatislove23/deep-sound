@@ -1,6 +1,7 @@
 import Container from "../Container/Container";
 import { StyledBlog } from "./StyledBlog.styled";
 import BlogItem from '../BlogItem/BlogItem';
+import { StyledLinkShowMore } from '../NewArrives/StyledNewArrives.styled';
 
 const blogs = [{
 	id: 1,
@@ -37,6 +38,7 @@ function Blog() {
 						<BlogItem key={blog.id} {...blog}/>
 					))}
 				</div>	
+				<StyledLinkShowMore to={""}>Go to review page</StyledLinkShowMore>
 			</Container>
 		</StyledBlog>
 	
