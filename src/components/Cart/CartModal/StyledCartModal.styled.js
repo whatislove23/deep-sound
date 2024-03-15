@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
 export const StyledCartModal = styled.div`
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
     top: 0;
     right: 0;
     width: 480px;

@@ -70,14 +70,12 @@ function Header(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/cart">
                 <svg
                   onClick={props.openModal}
-                  style={{ width: "22.5px", height: "23.3px", fill: "#303030" }}
+                  style={{ cursor: 'pointer', width: "22.5px", height: "23.3px", fill: "#303030" }}
                 >
                   <use href={icons + "#basket"}></use>
                 </svg>
-              </NavLink>
             </li>
           </ul>
           <NavHeader />
