@@ -9,7 +9,7 @@ import {
   StyledBreadcrumbsLink,
   StyledBreadcrumbsList,
 } from "./StyledBreadcrumbs.styled";
-import Close from "../../assets/Close.svg?react";
+import Cancel from '../Cancel/Cancel';
 
 function Breadcrumbs({ title }) {
   return (
@@ -23,7 +23,7 @@ function Breadcrumbs({ title }) {
             <StyledBreadcrumbsItem>{title}</StyledBreadcrumbsItem>
           </StyledBreadcrumbsList>
           <NavLink to={'/'}>
-            <Close />
+            <Cancel btnType={'dark'}/>
           </NavLink>
         </StyledBreadcrumbsInner>
       </Container>
