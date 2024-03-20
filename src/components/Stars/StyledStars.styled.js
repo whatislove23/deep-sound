@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { IoStarSharp, IoStarHalfSharp } from "react-icons/io5";
-import Container from "../Container/Container";
 
 export const StyledStarHalf = styled(IoStarHalfSharp)`
   width: ${({$width}) => ($width)}px;
@@ -12,8 +11,7 @@ export const StyledStar = styled(IoStarSharp)`
   height: ${({$width}) => ($width)}px;
   color: var(--accent-yellow);
 `;
-export const StyledStarContainer = styled(Container)`
+export const StyledStarContainer = styled.div`
   display: flex;
-  width: 68px;
   gap: ${({$gap}) => ($gap)}px;
 `;
