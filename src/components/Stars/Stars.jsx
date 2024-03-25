@@ -1,17 +1,21 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { StyledStarHalf, StyledStar } from "./StyledStars.styled";
+import { StyledStarHalf, StyledStar, StyledStarContainer } from "./StyledStars.styled";
 
-export default function Stars({ rating, ...props }) {
+export default function Stars({ rating, width = 12, gap = 2, ...props }) {
   const res = [];
   for (let i = 1; i <= Math.floor(rating); i++) {
-    res.push(<StyledStar key={i} className="fullStar" />);
+    res.push(<StyledStar $width={width} key={i} className="fullStar" />);
   }
   let rest = Number("0." + (rating.toString().split(".")[1] || 0));
-  if (rest <= 0.5)
-    res.push(<StyledStarHalf width={"12px"} key={res.length + 1} />);
-  if (rest >= 0.7) res.push(<StyledStar key={res.length + 1} />);
-  return <div {...props}>{res}</div>;
+  if (rest <= 0.5 && rest !== 0)
+  res.push(<StyledStarHalf $width={width} key={res.length + 1} />);
+  if (rest > 0.5) 
+  res.push(<StyledStar $width={width}  key={res.length + 1} />);
+  return <StyledStarContainer $gap={gap} {...props}>{res}</StyledStarContainer>;
 }
 
-Stars.propTypes = { rating: PropTypes.number };
+Stars.propTypes = { 
+  rating: PropTypes.number,
+  width: PropTypes.number,
+  gap: PropTypes.number
+};

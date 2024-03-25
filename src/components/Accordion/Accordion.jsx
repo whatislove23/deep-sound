@@ -10,15 +10,15 @@ import {
 } from "./StyledAccordion.styled";
 import chevron from "../../assets/ChevronDown.svg";
 
-function Accordion({ children, title }) {
+function Accordion({ children, title, idName }) {
   const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
-	
+
   return (
-    <StyledAccordion>
+    <StyledAccordion id={idName}>
       <Container>
         <StyledAccordionWrapper>
           <StyledAccordionHeader onClick={handleClick} $isActive={isActive}>
@@ -41,4 +41,5 @@ export default Accordion;
 Accordion.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
+  idName: PropTypes.string,
 };
